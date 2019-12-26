@@ -23,7 +23,11 @@ body {
   color: blue;
   transition: 0.5s;
 }
-//这个和transition相结合？
+
 .box span:nth-child(odd) {
   transform: translateY(-100%);
 }
+
+// .box span:nth-child(even) {
+//   transform: translateY(100%);
+// }
