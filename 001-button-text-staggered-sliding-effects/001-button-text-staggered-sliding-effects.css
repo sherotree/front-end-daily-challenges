@@ -1,0 +1,29 @@
+.html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 197, 241);
+}
+
+.box {
+  width: 200px;
+  height: 60px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.box span {
+  display: inline-block;
+  color: blue;
+  transition: 0.5s;
+}
+//这个和transition相结合？
+.box span:nth-child(odd) {
+  transform: translateY(-100%);
+}
