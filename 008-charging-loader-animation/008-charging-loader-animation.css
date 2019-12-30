@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, teal, aqua);
+}
+
+.battery {
+  width: 6em;
+  height: 3em;
+  border: 0.5em solid midnightblue;
+  border-radius: 0.2em;
+  background-image: linear-gradient(to right, whitesmoke, whitesmoke);
+  background-repeat: no-repeat;
+  background-size: 30% 80%;
+  background-position: top 0.3em left 0.3em;
+  font-size: 2em;
+  position: relative;
+  animation: charge 5s steps(8) infinite;
+}
+
+.battery::after {
+  content: '';
+  position: absolute;
+  width: 0.5em;
+  height: 2em;
+  background: midnightblue;
+  top: 0.5em;
+  right: -1em;
+  border-radius: 0 0.2em 0.2em 0;
+}
+
+@keyframes charge {
+  from {
+    background-size: 10% 80%;
+  }
+
+  to {
+    background-size: 95% 80%;
+  }
+}
