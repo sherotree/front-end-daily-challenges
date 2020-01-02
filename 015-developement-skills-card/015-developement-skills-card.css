@@ -1,0 +1,74 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(dimgray, silver, silver, dimgray);
+}
+
+.card {
+  width: 400px;
+  background: linear-gradient(#333, dimgray);
+  color: white;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  border-radius: 10px;
+}
+
+.card h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.skill {
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skill:hover {
+  background-color: #333;
+}
+
+.skill span {
+  display: block;
+}
+
+.percent {
+  width: 100%;
+  height: 30%;
+  border: 1px solid mediumspringgreen;
+  border-radius: 0.2em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, mediumspringgreen, green);
+}
+
+.html .percent {
+  background-size: 90%;
+}
+
+.css .percent {
+  background-size: 95%;
+}
+
+.javascript .percent {
+  background-size: 80%;
+}
+
+.svg .percent {
+  background-size: 60%;
+}
+
+.canvas .percent {
+  background-size: 75%;
+}
