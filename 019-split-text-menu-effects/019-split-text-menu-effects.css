@@ -1,0 +1,62 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+li {
+  list-style-type: none;
+  color: transparent;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+  width: 7em;
+  border-top: 1px solid transparent;
+  position: relative;
+  margin: 0.5em;
+  transition: 0.3s;
+}
+
+li:hover {
+  border-top-color: yellow;
+}
+
+li::before,
+li::after {
+  content: attr(data-text);
+  position: absolute;
+  top: -0.5em;
+  left: 0;
+  width: 100%;
+  color: silver;
+}
+
+li::before {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+li::after {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+li:hover::before,
+li:hover::after {
+  color: yellow;
+  transition: left 0.3s ease-out;
+  transition-delay: 0.2s;
+}
+
+li:nth-child(odd):hover::before,
+li:nth-child(even):hover::after {
+  left: -0.15em;
+}
+
+li:nth-child(even):hover::before,
+li:nth-child(odd):hover::after {
+  left: 0.15em;
+}
