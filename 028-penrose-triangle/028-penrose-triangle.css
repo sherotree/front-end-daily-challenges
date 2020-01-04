@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  overflow: hidden;
+}
+
+.penrose {
+  width: 20em;
+  height: 20em;
+  position: relative;
+  top: -1em;
+  left: -3em;
+  animation: rotating 10s linear infinite;
+  transform-origin: 66% 66%;
+}
+
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  clip-path: polygon(57% 0, 75% 0, 26% 85%, 89.5% 85%, 98.4% 100%, 0 100%);
+}
+
+span:nth-child(1) {
+  transform: rotate(0deg);
+  filter: brightness(1);
+}
+
+span:nth-child(2) {
+  transform: rotate(120deg);
+  top: 18.3%;
+  left: 43%;
+  filter: brightness(0.66);
+}
+
+span:nth-child(3) {
+  transform: rotate(240deg);
+  filter: brightness(0.33);
+  top: 46.5%;
+  left: 5.9%;
+}
+
+@keyframes rotating {
+  to {
+    transform: rotate(2turn);
+    filter: hue-rotate(360deg);
+  }
+}
