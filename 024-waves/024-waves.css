@@ -1,0 +1,65 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(antiquewhite, navajowhite);
+}
+
+.sea {
+  width: 300px;
+  height: 300px;
+  background-color: whitesmoke;
+  background-image: linear-gradient(
+    darkblue,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(255, 255, 255, 0.5)
+  );
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 250px;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.wave {
+  position: absolute;
+  top: -250px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: deepskyblue;
+  border-radius: 43%;
+  filter: opacity(0.4);
+  animation: drift linear;
+  transform-origin: 50% 48%;
+}
+
+.wave:nth-child(1) {
+  animation-duration: 15s;
+}
+
+.wave:nth-of-type(2) {
+  animation-duration: 30s;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
