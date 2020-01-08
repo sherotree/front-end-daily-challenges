@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right bottom, dimgray, black);
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  border: 4px solid transparent;
+  border-left-color: slategray;
+  padding-left: 2em;
+  transition: 500ms;
+  margin: 1em 0;
+}
+
+li:hover {
+  border-left-color: white;
+}
+
+span {
+  color: white;
+  font-size: 30px;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  transition: 500ms;
+}
+
+li:hover span {
+  color: #333;
+  transition-delay: calc(50ms * var(--n) + 100ms);
+}
+
+span:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  border-radius: 0.1em;
+  z-index: -1;
+  transition: 500ms;
+}
+
+li:hover span:before {
+  width: 80%;
+  background-color: white;
+  transform: rotate(-25deg);
+  transition-delay: calc(50ms * var(--n));
+}
+
+span:nth-child(1) {
+  --n: 1;
+}
+span:nth-child(2) {
+  --n: 2;
+}
+span:nth-child(3) {
+  --n: 3;
+}
+span:nth-child(4) {
+  --n: 4;
+}
+span:nth-child(5) {
+  --n: 5;
+}
+span:nth-child(6) {
+  --n: 6;
+}
+span:nth-child(7) {
+  --n: 7;
+}
+span:nth-child(8) {
+  --n: 8;
+}
+span:nth-child(9) {
+  --n: 9;
+}
