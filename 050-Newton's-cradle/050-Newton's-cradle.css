@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: beige;
+}
+
+.loader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  width: 12em;
+  border: solid black;
+  padding: 0 4em 2em 4em;
+  border-width: 0.4em 0.1em 4em 0.1em;
+}
+
+span {
+  position: relative;
+  background: black;
+  width: 0.2em;
+  height: 10em;
+  transform-origin: top;
+}
+
+span::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background: black;
+  left: -1.5em;
+}
+
+span:first-child {
+  animation: moving-up 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    alternate;
+  --direction: 1;
+}
+
+span:last-child {
+  animation: moving-up 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    alternate-reverse;
+  --direction: -1;
+}
+
+@keyframes moving-up {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(45deg * var(--direction)));
+  }
+}
